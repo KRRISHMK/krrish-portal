@@ -36,3 +36,55 @@
     transform: rotate(360deg);
   }
 }
+
+/* CSS Override */
+.rs-modal-xs {
+  width: 300px !important;
+  padding-top: 35px !important;
+  display: inline-block !important;
+  padding-left: 15px !important;
+}
+/* Mobile */
+@media screen and (max-width: 748px) {
+  .styles-module_item-container__a8zaY {
+    width: 430.79px !important;
+  }
+  .round-card-mobile {
+    height: 80px !important;
+    width: 80px !important;
+  }
+  .item-image {
+    max-width: 200px;
+    max-height: 200px;
+    height: 200px;
+    width: 200px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .item-image {
+    max-width: 358px;
+    max-height: 350px;
+    height: 350px;
+    width: 358px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .detail-card-col {
+    width: 100% !important;
+  }
+  .only-desktop{
+    display: none;
+  }
+  .rs-carousel {
+    height: 200px !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .only-mobile{
+    display: none;
+  }
+  .rs-carousel {
+    height: 500px !important;
+  }
+}

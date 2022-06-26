@@ -1,0 +1,34 @@
+.photo-gallery-corousel {
+  align-items: center;
+  gap: 15px;
+}
+.photo-media {
+  @media only screen and (min-width: 1200px) {
+    max-width: 495px;
+  }
+  @media screen and (min-width: 991px) and (max-width: 1200px) {
+    max-width: 350px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 990px) {
+    max-width: 350px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    max-width: 170px;
+  }
+  @media screen and (max-width: 320px) {
+    max-width: 125px;
+  }
+}
+
+.remove-photo {
+  color: #000;
+  font-size: 32px;
+  position: relative;
+  left: 232px;
+  bottom: 111px;
+
+  &:hover {
+    background-color: rgb(251, 4, 4);
+    border-radius: 27px;
+  }
+}

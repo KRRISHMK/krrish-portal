@@ -1,0 +1,53 @@
+.background-content {
+  background-color: $color-white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  z-index: 1;
+  .content {
+    margin-top: 0;
+  }
+}
+.background-card-white {
+  background-color: $color-white;
+  padding: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: var(--bs-breadcrumb-divider, ">") !important;
+}
+
+.shipment-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(10px, 2fr));
+  gap: 20px;
+  @media screen and (max-width: 768px) {
+    display: contents;
+    gap: 0px;
+  }
+}
+.shipment-card p{
+  padding-left: 50px;
+}
+.payment-content-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(10px, 2fr));
+  gap: 20px;
+  @media screen and (max-width: 768px) {
+    display: contents;
+    gap: 0px;
+  }
+}
+.payment-content-card-icon {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(6, minmax(10px, 2fr));
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+.payment-content-card-icon span {
+  font-size: 50px;
+}

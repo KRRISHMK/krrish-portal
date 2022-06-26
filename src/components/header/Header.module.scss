@@ -1,0 +1,40 @@
+.root {
+    /* Layout */
+    display: flex;
+    align-items: center;
+    height: var(--topbarHeight);
+  
+    /* Position */
+    position: sticky;
+    top: 0;
+    z-index: var(--zIndexTopbar);
+  
+    /* Style */
+    background-color: var(--matterColorLight);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    padding: 0 24px;
+  
+    @media (min-width: 768px) {
+      padding: 0 36px;
+    }
+  }
+  
+  .headerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    width: 100%;
+  }
+  
+  .logo {
+    & path {
+      fill: var(--mainColor);
+    }
+  }
+  
+  .headerNavigation {
+    /* Layout */
+    display: flex;
+  }
+  
