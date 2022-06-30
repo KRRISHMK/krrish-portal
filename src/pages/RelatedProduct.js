@@ -6,7 +6,7 @@ const RelatedProduct = (props) => {
   const { category, className } = props;
   let productList = [];
   const [relatedProductList, setRelatedProdctList] = useState([]);
-console.log(category)
+
   const getList = async () => {
     await dummyData.forEach((data) => {
       if (data.category === category) {
@@ -21,14 +21,11 @@ console.log(category)
   useEffect(() => {
     getList();
   }, [props]);
-  console.log("relatedProductList",relatedProductList)
+
   return (
     <div className={`${className} slider-card`}>
       {relatedProductList &&
-        relatedProductList.map(data => (
-        <RelatedProductItem detail={data} />
-        )
-        )}
+        relatedProductList.map((data) => <RelatedProductItem detail={data} />)}
     </div>
   );
 };

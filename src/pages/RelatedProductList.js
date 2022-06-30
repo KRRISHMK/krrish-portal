@@ -22,12 +22,12 @@ const RelatedProductList = () => {
   useEffect(() => {
     getList();
   }, []);
-console.log("relatedProductList", relatedProductList)
+
   return (
     <div className="related-product-card p-4">
       {relatedProductList &&
         relatedProductList.length > 0 &&
-        relatedProductList.map((list) => <RelatedProductItem detail={list} />)}
+        relatedProductList.map((list) => <RelatedProductItem isShowButton detail={list} />)}
     </div>
   );
 };

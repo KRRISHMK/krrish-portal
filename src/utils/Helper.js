@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 export const useOutsideAlerter = (ref, onClickOutsideFn) => {
   useEffect(() => {
@@ -16,3 +16,12 @@ export const useOutsideAlerter = (ref, onClickOutsideFn) => {
     };
   }, [ref, onClickOutsideFn]);
 };
+
+//Get Random Array
+const GetRandomArray = (array) => {
+  let random = Math.floor(Math.random() * array.length);
+  console.log("random", random);
+  let randomArray = array[random];
+  return randomArray;
+};
+export default GetRandomArray;

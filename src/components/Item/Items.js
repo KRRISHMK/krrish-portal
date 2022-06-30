@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Panel, Divider, Badge } from "rsuite";
+import GetRandomArray from "../../utils/Helper";
 import ShowMoreContent from "../base/showMoreContent";
 import ItemCategory from "./ItemCategory";
 import ItemTitle from "./ItemTitle";
@@ -22,7 +23,7 @@ const Items = (props) => {
     descriptionLength,
   } = itemDetail;
 
-  let imageUrl = images[0];
+  let imageUrl = GetRandomArray(images);
 
   let dummy =
     "Product Description is showing here, it should be detailed of the product.";
@@ -35,7 +36,7 @@ const Items = (props) => {
       style={{ display: "inline-block", cursor: "pointer" }}
     >
       <img
-        className="item-image"
+        className="item-image items-image"
         src={imageUrl ? imageUrl : "https://via.placeholder.com/240x240"}
         alt="img"
         onClick={() => {
@@ -43,21 +44,27 @@ const Items = (props) => {
         }}
       />
       <Panel>
-        <ItemTitle isItem text={title ? title : "Title"} fontBold />
-        <Badge content="NEW" />
-        <br />
-        <ItemCategory color="green" text={category ? category : "Category"} />
-        <p>
-          <small>
-            <ShowMoreContent
-              content={categorySplit}
-              maxContentLength={descriptionLength ? descriptionLength : 50}
-            />
-          </small>
-        </p>
-        <Rate rate={rate} offer={offer} />
-        <Divider>Ratings</Divider>
-        <Rating rating={rating} customers={customers} />
+        <div
+          onClick={() => {
+            navigate(`/item-detail/${title}`);
+          }}
+        >
+          <ItemTitle isItem text={title ? title : "Title"} fontBold />
+          <Badge content="NEW" />
+          <br />
+          <ItemCategory color="green" text={category ? category : "Category"} />
+          <p>
+            <small>
+              <ShowMoreContent
+                content={categorySplit}
+                maxContentLength={descriptionLength ? descriptionLength : 50}
+              />
+            </small>
+          </p>
+          <Rate rate={rate} offer={offer} />
+          <Divider>Ratings</Divider>
+          <Rating rating={rating} customers={customers} />
+        </div>
       </Panel>
     </Panel>
   );

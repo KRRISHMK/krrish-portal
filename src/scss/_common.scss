@@ -93,3 +93,18 @@
   height: 235px;
   width: 240px;
 }
+.related-card-height {
+  height: 215px;
+  @media screen and (max-width: 768px) {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .item-title{
+    font-size: 15px !important;
+  }
+}
+.items-image {
+  object-fit: contain;
+}

@@ -7,7 +7,7 @@ const ItemTitle = (props) => {
   return (
     <span
       style={{ color: `${color ? color : "black"}` }}
-      className={`${className}  fs-${fontSize ? fontSize : "4"} ${
+      className={`${className} item-title  fs-${fontSize ? fontSize : "4"} ${
         fontBold && "fw-bold"
       }`}
     >
