@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import { Modal, Button } from "rsuite";
+import { useNavigate } from "react-router-dom";
 
 const Slider = (props) => {
   const { label, images, width, isPreview } = props;
   const [isModalOpen, setModalOpen] = useState(false);
   const [isImage, setImage] = useState();
+  const navigate = useNavigate();
 
   function handleOnclick(url) {
     if (isPreview) {
       setModalOpen(!isModalOpen);
       setImage(url);
     } else {
-      window.location.href = { url };
+      navigate(url);
     }
   }
   function toggle() {

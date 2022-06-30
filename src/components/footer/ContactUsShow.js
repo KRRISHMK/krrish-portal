@@ -2,8 +2,10 @@ import React from "react";
 import BackgroundWhite from "../base/BackgroundWhite";
 import { FaShippingFast, FaRegCreditCard } from "react-icons/fa";
 import { Panel, Button } from "rsuite";
+import { useNavigate } from "react-router-dom";
 
 const ContactUsShow = (props) => {
+  const navigate = useNavigate();
   const { freeShip, cod, contactUsUrl } = props;
   return (
     <BackgroundWhite>
@@ -31,7 +33,7 @@ const ContactUsShow = (props) => {
         <div className="d-flex justify-content-center">
           <Button
             onClick={() => {
-              window.location.href = `${contactUsUrl ? contactUsUrl : "/"}`;
+              navigate(`${contactUsUrl ? contactUsUrl : "/"}`);
             }}
             appearance="primary"
           >

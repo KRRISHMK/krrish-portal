@@ -10,8 +10,10 @@ import Slider from "../components/base/Slider";
 import RelatedProduct from "./RelatedProduct";
 import dummyData from "../dummyData/data";
 import Header from "../components/base/Header";
+import { useNavigate } from "react-router-dom";
 
 const ItemDetail = (props) => {
+  const navigate = useNavigate();
   const [productDetail, setProductDetail] = useState({});
 
   const images = [
@@ -52,7 +54,6 @@ const ItemDetail = (props) => {
     getProductDetail();
   }, []);
 
-  console.log("ProductDetail--->", productDetail);
   return (
     <ContainerStart>
       <Row>
@@ -87,9 +88,13 @@ const ItemDetail = (props) => {
       <BackgroundWhite>
         <ProductDetail description={productDetail.productDetail} />
       </BackgroundWhite>
-      <Header text={"Related Products"} buttonLabel="View all" buttonHandler={() => {
-        window.location.href=`/related-product/${productDetail.category}`
-      }} />
+      <Header
+        text={"Related Products"}
+        buttonLabel="View all"
+        buttonHandler={() => {
+          navigate(`/related-product/${productDetail.category}`);
+        }}
+      />
       <RelatedProduct category={productDetail.category} className="pt-3" />
     </ContainerStart>
   );

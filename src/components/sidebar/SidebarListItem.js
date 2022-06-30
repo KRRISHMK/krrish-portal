@@ -3,8 +3,10 @@ import { object, func, string } from "prop-types";
 import classNames from "classnames";
 import css from "./Sidebar.module.scss";
 import IconArrow from "../base/IconArrow";
+import { useNavigate } from "react-router-dom";
 
 const SidebarListItem = (props) => {
+  const navigate = useNavigate();
   const { item } = props;
   return (
     <li
@@ -12,7 +14,7 @@ const SidebarListItem = (props) => {
         [css.sidebarItemActive]: item.key === "home",
       })}
       onClick={() => {
-        window.location.href=`${item.link}`
+        navigate(`${item.link}`);
       }}
     >
       {item.label}

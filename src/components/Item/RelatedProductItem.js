@@ -1,15 +1,14 @@
 import React from "react";
-import { Panel, Divider, Badge } from "rsuite";
-import ShowMoreContent from "../base/showMoreContent";
+import { Panel, Badge } from "rsuite";
 import PriceDetail from "./detail/PriceDetail";
 import ItemCategory from "./ItemCategory";
 import ItemTitle from "./ItemTitle";
 import Rate from "./Rate";
 import Rating from "./Rating";
-
+import { useNavigate } from "react-router-dom";
 const RelatedProductItem = (props) => {
   const{detail}= props;
-  console.log("detail", detail)
+  const navigate = useNavigate();
   const {
     category,
     title,
@@ -19,7 +18,7 @@ const RelatedProductItem = (props) => {
   } = detail;
   return (
     <div className="related-card" onClick={() => {
-      window.location.href=`/item-detail/${title}`
+      navigate(`/item-detail/${title}`);
     }}>
       <Panel shaded bordered bodyFill style={{ display: "inline-block" }}>
         <img
@@ -28,7 +27,7 @@ const RelatedProductItem = (props) => {
           alt="img"
         />
         <Panel>
-          <ItemTitle text={title ? title : "MilkyBar"} fontBold />
+          <ItemTitle isItem text={title ? title : "MilkyBar"} fontBold />
           <Badge content="NEW" />
           <br />
           <ItemCategory color="green" text={category ? category : "category"} />

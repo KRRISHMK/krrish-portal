@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Panel, Divider, Badge } from "rsuite";
 import ShowMoreContent from "../base/showMoreContent";
 import ItemCategory from "./ItemCategory";
@@ -7,6 +8,7 @@ import Rate from "./Rate";
 import Rating from "./Rating";
 
 const Items = (props) => {
+  const navigate = useNavigate();
   const { itemDetail } = props;
   const {
     category,
@@ -21,7 +23,7 @@ const Items = (props) => {
   } = itemDetail;
 
   let imageUrl = images[0];
-  console.log(imageUrl);
+
   let dummy =
     "Product Description is showing here, it should be detailed of the product.";
   const categorySplit = productDetail ? productDetail : dummy;
@@ -37,7 +39,7 @@ const Items = (props) => {
         src={imageUrl ? imageUrl : "https://via.placeholder.com/240x240"}
         alt="img"
         onClick={() => {
-          window.location.href = `/item-detail/${title}`;
+          navigate(`/item-detail/${title}`);
         }}
       />
       <Panel>
