@@ -79,6 +79,43 @@ const dummyData = [
   {
     title: "Britannia Biscuits - Bourbon New and Chocolatier, 150g Pack",
     category: "Chocolate",
+    rate: "135",
+    offer: "108",
+    quantity: "432",
+    images: [
+      "https://www.bigbasket.com/media/uploads/p/l/40194051_6-cadbury-oreo-vanilla-jumbo-pack.jpg",
+      "https://www.bigbasket.com/media/uploads/p/l/40194051-6_5-cadbury-oreo-vanilla-jumbo-pack.jpg",
+      "https://www.bigbasket.com/media/uploads/p/l/40194051-3_8-cadbury-oreo-vanilla-jumbo-pack.jpg",
+      "https://www.bigbasket.com/media/uploads/p/l/40194051-2_6-cadbury-oreo-vanilla-jumbo-pack.jpg",
+    ],
+    rating: "4.6",
+    customers: "95",
+    highlights:
+      "Oreo sandwich crème biscuit brings together the rich, smooth taste of Vanilla crème filling with the bold taste of two crunchy Chocolate wafers. Cadbury Oreo family pack includes 5 delicious vanilla flavour Oreo each of 100g. This rich vanilla creme filling cookies contain 483 calories and 19.6g of fat and 0mg of cholesterol per 100g.Take a delicious break with an Oreo cookie, the perfect anytime snack.",
+    productDetail:
+      "Refined Wheat Flour, Sugar, Edible Vegetable Fat, Palmolein Oil, Cocoa Solids (2.3%), Invert Sugar, Leavening Agents (500(Ii), 503(Ii)), Iodised Salt, Emulsifier (322). Contains Added Flavour (Natural Identical Flavouring Substances).",
+  },
+
+  {
+    title: "Nestle Munch Bars  (187.2 g)",
+    category: "Chocolate",
+    rate: "125",
+    offer: "100",
+    quantity: "95",
+    images: [
+      "https://rukminim1.flixcart.com/image/416/416/l2rwzgw0/chocolate/a/r/q/-original-imagefpeybanfvhn.jpeg?q=70",
+      "https://rukminim1.flixcart.com/image/416/416/l2rwzgw0/chocolate/6/p/d/-original-imagefpe5fbyyjz6.jpeg?q=70","https://rukminim1.flixcart.com/image/416/416/l2rwzgw0/chocolate/q/u/x/-original-imagefthkzrangzh.jpeg?q=70"
+    ],
+    rating: "5.0",
+    customers: "542",
+    highlights:
+      "Pack Of 30 Pcs Strawberry Flavour Packed Safely 10% Extra allergen*information: Milk 30 Chocolate BarInside llergen_information Milk is_expiration_dated_product: Yes material_features: vegetarian",
+    productDetail:
+      "Pack Of 30 Pcs Strawberry Flavour Packed Safely 10% Extra allergen_information: Milk 30 Chocolate Bar Inside llergen_information: Milk is_expiration_dated_product: Yes material_features: vegetarian",
+  },
+  {
+    title: "Britannia Biscuits - Bourbon New and Chocolatier, 150g Pack",
+    category: "Chocolate",
     rate: "95",
     offer: "50",
     quantity: "95",
