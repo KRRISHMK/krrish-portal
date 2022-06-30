@@ -77,7 +77,7 @@ const dummyData = [
       "Pack Of 30 Pcs Strawberry Flavour Packed Safely 10% Extra allergen*information: Milk 30 Chocolate Bar Inside llergen_information: Milk is_expiration_dated_product: Yes material_features: vegetarian",
   },
   {
-    title: "Britannia Biscuits - Bourbon New and Chocolatier, 150g Pack",
+    title: "Cadbury Oreo - Vanilla, Jumbo Pack, 500 g",
     category: "Chocolate",
     rate: "135",
     offer: "108",
@@ -199,7 +199,7 @@ const dummyData = [
   },
   {
     title: "Women Pleated Purple Dress",
-    category: "Chocolate",
+    category: "Womens Costume",
     rate: "2330",
     offer: "459",
     quantity: "45",
