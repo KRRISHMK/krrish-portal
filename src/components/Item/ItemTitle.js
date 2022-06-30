@@ -1,7 +1,9 @@
 import React from "react";
 
 const ItemTitle = (props) => {
-  const { text, fontSize, className, color, fontBold } = props;
+  const { text, fontSize, className, isItem, color, fontBold } = props;
+  let titleText =
+    text && isItem ? `${text.slice(0, 40)}...` : text ? text : "Title";
   return (
     <span
       style={{ color: `${color ? color : "black"}` }}
@@ -9,7 +11,7 @@ const ItemTitle = (props) => {
         fontBold && "fw-bold"
       }`}
     >
-      {text ? text : "Category"}
+      {titleText}
     </span>
   );
 };

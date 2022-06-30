@@ -5,7 +5,7 @@ const FooterText = (props) => {
   let date = new Date();
   let year = date.getFullYear();
   return (
-    <div className="d-flex justify-content-center fw-bold">
+    <div className="d-flex justify-content-center fw-bold pb-3">
       © {year} {text} All Rights Reserved
     </div>
   );

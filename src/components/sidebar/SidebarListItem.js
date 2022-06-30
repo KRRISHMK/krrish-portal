@@ -11,6 +11,9 @@ const SidebarListItem = (props) => {
       className={classNames(css.sidebarItem, {
         [css.sidebarItemActive]: item.key === "home",
       })}
+      onClick={() => {
+        window.location.href=`${item.link}`
+      }}
     >
       {item.label}
     </li>

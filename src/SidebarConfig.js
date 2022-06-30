@@ -1,6 +1,6 @@
 // Sidebar list options
 const sidebarOptions = [
-    { key: "home", label: "Home" },
+    { key: "home", label: "Home", link: "/" },
     {
       key: "about",
       label: "About",

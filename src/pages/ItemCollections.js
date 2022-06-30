@@ -1,14 +1,13 @@
 import React from "react";
-import { Grid , Row, Col } from "rsuite";
 import Items from "../components/Item/Items";
 
-const ItemCollections = () => {
+const ItemCollections = (props) => {
+  const { data } = props;
   return (
     <div className="item-cards-collection">
-          <Items />
-          <Items />
-          <Items />
-          <Items />
+      {data &&
+        data.length > 0 &&
+        data.map((item) =>( <Items itemDetail={item} />))}
     </div>
   );
 };

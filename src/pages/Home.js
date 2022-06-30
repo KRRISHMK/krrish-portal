@@ -4,6 +4,7 @@ import RoundCard from "../components/Card/RoundCard";
 import ImageCarousel from "../components/carousel/ImageCarousel";
 import ImageCarouselWithChild from "../components/carousel/ImageCarouselWithChild";
 import PhotoCarousel from "../components/carousel/PhotoCarousel";
+import dummyData from "../dummyData/data";
 import ItemCollections from "./ItemCollections";
 
 const Home = () => {
@@ -56,7 +57,7 @@ const Home = () => {
       <ContainerStart className="d-flex justify-content-center">
         <RoundCard />
       </ContainerStart>
-      <ItemCollections />
+      <ItemCollections data={dummyData} />
     </>
   );
 };

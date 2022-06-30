@@ -7,30 +7,44 @@ import Rate from "./Rate";
 import Rating from "./Rating";
 
 const Items = (props) => {
+  const { itemDetail } = props;
   const {
     category,
     title,
-    description,
-    imageUrl,
+    productDetail,
+    images,
     rating,
     customers,
+    rate,
+    offer,
     descriptionLength,
-  } = props;
+  } = itemDetail;
+
+  let imageUrl = images[0];
+  console.log(imageUrl);
   let dummy =
     "Product Description is showing here, it should be detailed of the product.";
-  const categorySplit = description ? description : dummy;
+  const categorySplit = productDetail ? productDetail : dummy;
   return (
-    <Panel shaded bordered bodyFill style={{ display: "inline-block" }}>
+    <Panel
+      shaded
+      bordered
+      bodyFill
+      style={{ display: "inline-block", cursor: "pointer" }}
+    >
       <img
-      className="item-image"
+        className="item-image"
         src={imageUrl ? imageUrl : "https://via.placeholder.com/240x240"}
         alt="img"
+        onClick={() => {
+          window.location.href = `/item-detail/${title}`;
+        }}
       />
       <Panel>
-        <ItemTitle text={title ? title : "MilkyBar"} fontBold  />
+        <ItemTitle isItem text={title ? title : "Title"} fontBold />
         <Badge content="NEW" />
         <br />
-        <ItemCategory color="green" text={category ? category : "category"} />
+        <ItemCategory color="green" text={category ? category : "Category"} />
         <p>
           <small>
             <ShowMoreContent
@@ -39,7 +53,7 @@ const Items = (props) => {
             />
           </small>
         </p>
-        <Rate />
+        <Rate rate={rate} offer={offer} />
         <Divider>Ratings</Divider>
         <Rating rating={rating} customers={customers} />
       </Panel>

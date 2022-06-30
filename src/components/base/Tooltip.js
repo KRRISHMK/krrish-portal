@@ -6,7 +6,7 @@ const ToolTip = (props) => {
   const { children, icon, placement } = props;
   return (
     <Whisper
-      placement={placement ? placement : "bottomEnd"}
+      placement={placement ? placement : "bottom"}
       followCursor
       speaker={<Popover>{children}</Popover>}
     >

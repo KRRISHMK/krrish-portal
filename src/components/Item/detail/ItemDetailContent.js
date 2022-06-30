@@ -8,23 +8,32 @@ import Size from "./Size";
 import StockCount from "./StockCount";
 
 const ItemDetailContent = (props) => {
-  const { slug, category, showSize } = props;
+  const { showSize, detail } = props;
+  const {
+    category,
+    title,
+    rating,
+    customers,
+    rate,
+    offer,
+    quantity,
+  } = detail;
   //Brudcrumbs List
   const breadcrumbList = [
     { label: "Home", link: "/" },
     {
-      label: slug ? slug : "Category",
+      label: category ? category : "Category",
       link: "",
     },
   ];
   return (
     <div>
       <BreadCrumb list={breadcrumbList} />
-      <ItemTitle text={slug ? slug : "Title"} />
+      <ItemTitle text={title ? title : "Title"} />
       <ItemCategory text={category ? category : "Category"} />
-      <RatingDetail className="pt-3" />
-      <PriceDetail className="pt-2" />
-      <StockCount className="pt-2" count={"120"} />
+      <RatingDetail rating={rating} customers={customers} className="pt-3" />
+      <PriceDetail rate={offer} offer={rate} className="pt-2" />
+      <StockCount quantity={quantity} className="pt-2" count={"120"} />
       {showSize && <Size className="pt-1" />}
     </div>
   );
