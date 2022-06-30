@@ -8,8 +8,9 @@ import Rating from "./Rating";
 import { useNavigate } from "react-router-dom";
 import CartButton from "../CartButton";
 import GetRandomArray from "../../utils/Helper";
+
 const RelatedProductItem = (props) => {
-  const { detail, isShowButton } = props;
+  const { detail, isShowButton, isNewPage } = props;
   const navigate = useNavigate();
   const { category, title, images, rating, customers } = detail;
   let imageUrl = GetRandomArray(images);
@@ -26,7 +27,9 @@ const RelatedProductItem = (props) => {
           src={imageUrl ?? "https://via.placeholder.com/240x240"}
           alt="img"
           onClick={() => {
-            navigate(`/item-detail/${title}`);
+            if (isNewPage) {
+              window.location.href = `/item-detail/${title}`;
+            } else navigate(`/item-detail/${title}`);
           }}
         />
         <Panel>

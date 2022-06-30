@@ -1,7 +1,7 @@
 .item-cards-collection {
   display: grid;
   padding: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
   gap: 20px;
 }
 .item-collection-rating {

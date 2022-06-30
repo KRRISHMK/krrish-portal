@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ContainerStart from "../components/base/ContainerStart";
 import ImageCarouselWithChild from "../components/carousel/ImageCarouselWithChild";
-import { Row, Col } from "rsuite";
+import { Row, Col, Loader } from "rsuite";
 import ItemDetailContent from "../components/Item/detail/ItemDetailContent";
 import ProductDetail from "../components/Item/detail/ProductDetail";
 import BackgroundWhite from "../components/base/BackgroundWhite";
@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 const ItemDetail = (props) => {
   const navigate = useNavigate();
   const [productDetail, setProductDetail] = useState({});
-
+  const [isLoading, setIsLoading] = useState(false);
   const images = [
     {
       img: "https://picsum.photos/id/1/720/480",
@@ -48,12 +48,17 @@ const ItemDetail = (props) => {
         setProductDetail(list);
       }
     });
+    setIsLoading(false);
   };
 
   useEffect(() => {
+    setIsLoading(true);
     getProductDetail();
   }, []);
-
+  if (isLoading) {
+    <Loader size="lg" content="Large" />;
+  }
+  console.log(isLoading);
   return (
     <ContainerStart>
       <Row>
@@ -95,7 +100,7 @@ const ItemDetail = (props) => {
           navigate(`/related-product/${productDetail.category}`);
         }}
       />
-      <RelatedProduct category={productDetail.category} className="pt-3" />
+      <RelatedProduct isNewPage category={productDetail.category} className="pt-3" />
     </ContainerStart>
   );
 };
