@@ -1,104 +1,114 @@
-.cart-button{
-    position: relative;
-    padding: 10px;
-    width: 100%;
-    height: 50px;
-    border: 0;
-    outline: none;
-    border-radius: 10px;
-    background-color: #1b6eee;
-    cursor: pointer;
-    color: #fff;
-    transition: 0.3s ease-in-out;
-    overflow: hidden;
+.cart-button {
+  position: relative;
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  background-color: #1b6eee;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .cart-button span {
-    position: absolute;
-    /* font-weight: bold; */
-    font-size: 1.3em;
-    z-index: 3;
-    transform: translate(-50%, -50%);
-    color: #fff;
+  /* position: absolute; */
+  /* font-weight: bold; */
+  padding-left: 52px;
+  font-size: 18px;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .cart-button span {
+    padding-left: 10px !important;
+  }
 }
 
 .cart-button span.add-to-cart {
-    opacity: 1;
+  opacity: 1;
 }
 .cart-button span.added {
-    opacity: 0;
+  opacity: 0;
 }
 .cart-button .cart-icon {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: -10%;
-    transform: translate(-50%, -50%);
-    font-size: 2em;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
 }
 
 .cart-button .cart-item {
-    position: absolute;
-    z-index: 3;
-    top: -20%;
-    left: 52%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2em;
+  position: absolute;
+  z-index: 3;
+  top: -20%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2em;
 }
 
 .cart-button.clicked .cart-icon {
-    animation: cart 1.5s ease-in-out forwards;
+  animation: cart 1.5s ease-in-out forwards;
 }
 
 .cart-button.clicked .cart-item {
-    animation: box 1.5s ease-in-out forwards;
+  animation: box 1.5s ease-in-out forwards;
 }
 
 .cart-button.clicked span .add-to-cart {
-    animation: add 1.5s ease-in-out forwards;
+  animation: add 1.5s ease-in-out forwards;
 }
 
 .cart-button.clicked .added {
-    animation: added 1.5s ease-in-out forwards;
+  animation: added 1.5s ease-in-out forwards;
 }
 
 @keyframes cart {
-    0% {
-        left: -10%
-    }
-    40%, 60% {
-        left: 50%
-    }
-    100% {
-        left: 110%
-    }
+  0% {
+    left: -10%;
+  }
+  40%,
+  60% {
+    left: 50%;
+  }
+  100% {
+    left: 110%;
+  }
 }
 @keyframes box {
-    0%, 40% {
-        top: -20%
-    }
-    60% {
-        top: 40%;
-        left: 52%;
-    }
-    100% {
-        top: 40%;
-        left: 112%;
-    }
+  0%,
+  40% {
+    top: -20%;
+  }
+  60% {
+    top: 40%;
+    left: 52%;
+  }
+  100% {
+    top: 40%;
+    left: 112%;
+  }
 }
 @keyframes add {
-    0% {
-        opacity: 1;
-    }
-    20%, 100% {
-       opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  20%,
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes added {
-    0%, 80% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 1;
-    }
+  0%,
+  80% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 1;
+  }
 }

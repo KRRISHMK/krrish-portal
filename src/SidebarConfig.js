@@ -10,11 +10,12 @@ const sidebarOptions = [
       ]
     },
     {
-      key: "support",
-      label: "Support",
+      key: "admin",
+      label: "Admin",
       options: [
-        { key: "getting-started", label: "Getting started" },
-        { key: "how-it-works", label: "How it works" }
+        { key: "header", label: "Header" , link: "/admin/header"},
+        { key: "category", label: "Category" , link: "/admin/category"},
+        { key: "footer", label: "Footer", link: "/admin/footer" }
       ]
     },
     { key: "contact", label: "Contact" }

@@ -7,6 +7,9 @@ import "rsuite/dist/rsuite.min.css";
 import "../src/scss/style.scss";
 import ItemDetail from "./pages/ItemDetail";
 import RelatedProductList from "./pages/RelatedProductList";
+import AdminFooter from "./admin/footer/AdminFooter";
+import AdminHeader from "./admin/header/AdminHeader";
+import CategoryList from "./admin/category/CategoryList";
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +31,26 @@ function App() {
           path="/related-product/:id"
           element={
             <DefaultLayout exact path="/related-product" component={RelatedProductList} />
+          }
+        ></Route>
+
+        {/* Admin Route */}
+        <Route
+          path="/admin/header"
+          element={
+            <DefaultLayout exact component={AdminHeader} />
+          }
+        ></Route>
+        <Route
+          path="/admin/category"
+          element={
+            <DefaultLayout exact component={CategoryList} />
+          }
+        ></Route>
+        <Route
+          path="/admin/footer"
+          element={
+            <DefaultLayout exact component={AdminFooter} />
           }
         ></Route>
       </Routes>

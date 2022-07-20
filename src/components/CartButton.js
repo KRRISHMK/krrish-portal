@@ -18,8 +18,12 @@ const CartButton = (props) => {
         cartClick();
       }}
     >
-      <span className={`${click ? "d-none" : ""} "add-to-cart fw-bold"`}>Add to Cart</span>
-      <span className="added"><MdShoppingCart /> Added</span>
+      <span className={`${click ? "d-none" : ""} "add-to-cart fw-bold"`}>
+        Add to Cart
+      </span>
+      <span className="added">
+        <MdShoppingCart /> Added
+      </span>
       <BsCart3 className="cart-icon" />
       <ImGift className="cart-item" />
     </button>
