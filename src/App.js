@@ -10,6 +10,8 @@ import RelatedProductList from "./pages/RelatedProductList";
 import AdminFooter from "./admin/footer/AdminFooter";
 import AdminHeader from "./admin/header/AdminHeader";
 import CategoryList from "./admin/category/CategoryList";
+import AdminList from "./admin/list/AdminList";
+import Edit from "./admin/list/Edit";
 function App() {
   return (
     <BrowserRouter>
@@ -45,6 +47,18 @@ function App() {
           path="/admin/category"
           element={
             <DefaultLayout exact component={CategoryList} />
+          }
+        ></Route>
+        <Route
+          path="/admin/product"
+          element={
+            <DefaultLayout exact component={AdminList} />
+          }
+        ></Route>
+        <Route
+          path="/admin/product/edit"
+          element={
+            <DefaultLayout exact component={Edit} />
           }
         ></Route>
         <Route

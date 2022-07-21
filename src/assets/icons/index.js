@@ -9,8 +9,9 @@ import starIcon from "./star-icon.svg";
 import checkIcon from "./tick-icon.svg";
 import { FaEdit } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
-import { AiOutlineFacebook, AiOutlineCopyright } from "react-icons/ai";
-import { FiYoutube, FiTwitter } from "react-icons/fi";
+import { AiOutlineFacebook, AiOutlineCopyright, AiOutlineBgColors } from "react-icons/ai";
+import { FiYoutube, FiTwitter, FiType } from "react-icons/fi";
+import { MdOutlineBorderColor } from "react-icons/md";
 
 
 const ChevronRight = () => <SVG src={chevronRight} />;
@@ -37,6 +38,15 @@ const TwitterIcon = ({ size }) => (
 const CopyrightsIcon = ({ size }) => (
   <AiOutlineCopyright style={{ fontSize: size, marginRight: 10 }} />
 );
+const PaintIcon = ({ size }) => (
+  <AiOutlineBgColors style={{ fontSize: size, marginRight: 10 }} />
+);
+const ColorPenIcon = ({ size }) => (
+  <MdOutlineBorderColor style={{ fontSize: size, marginRight: 10 }} />
+);
+const TextIcon = ({ size }) => (
+  <FiType style={{ fontSize: size, marginRight: 10 }} />
+);
 export {
   ChevronLeft,
   ChevronRight,
@@ -49,5 +59,8 @@ export {
   FacebookIcon,
   YoutubeIcon,
   TwitterIcon,
-  CopyrightsIcon
+  CopyrightsIcon,
+  PaintIcon,
+  ColorPenIcon,
+  TextIcon
 };

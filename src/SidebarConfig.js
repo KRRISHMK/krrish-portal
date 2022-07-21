@@ -15,6 +15,7 @@ const sidebarOptions = [
       options: [
         { key: "header", label: "Header" , link: "/admin/header"},
         { key: "category", label: "Category" , link: "/admin/category"},
+        { key: "product", label: "Product" , link: "/admin/product"},
         { key: "footer", label: "Footer", link: "/admin/footer" }
       ]
     },
